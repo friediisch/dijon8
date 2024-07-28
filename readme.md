@@ -6,11 +6,12 @@
     - GPU: RTX 3090
     - Python 3.12.3
   auf einem Endgerät mit weniger RAM/VRAM muss ggf. ein anderes Modell, bzw. Quantisation verwendet werden.
-- Um Osrambot in Docker laufen zu lassen, verwende `docker build --tag=osrambot .` und `docker run -it osrambot`.
+- Um Osrambot in Docker laufen zu lassen, verwende `docker build --tag=osrambot .` und `docker run -it osrambot` (Docker nicht ganz getestet leider, dafür hat mir die Zeit gefehlt).
 - Um den Code ohne Docker laufen zu lassen, führe die folgenden Schritte aus
     - Verwende `python3.12 -m venv venv` um eine neue virtuelle Umgebung zu erstellen (Python 3.12.4).
     - Activate it using `source venv/bin/activate`.
     - Install all dependencies using `pip install -r requirements-freeze.txt`.
+    - Download the models using `python src/download_models.py`
     - Run Osrambot using `python src/main.py`
 - Bei der ersten Verwendung müssen im ersten Schritt die Parameter für Llama-3.1-8B-Instruct heruntergeladen werden, sofern diese nicht bereits lokal durch Huggingface im Cache liegen.
 
